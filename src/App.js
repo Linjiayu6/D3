@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
+// import Rect from './components/rect'
+// import Scale from './components/scale'
+import Axis from './components/axis'
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        12131
+      <div id="App">
+        <Axis />
       </div>
     );
   }
