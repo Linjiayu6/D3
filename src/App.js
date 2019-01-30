@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import LineChart from './components/chart/lineChartSingle'
+import PieChart from './components/chart/pieChart'
 
 class App extends Component {
 
   render() {
     return (
       <div id="App">
-        <LineChart />
+        <PieChart />
       </div>
     )
   }
