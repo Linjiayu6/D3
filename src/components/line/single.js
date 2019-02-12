@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as d3 from 'd3'
 
-import data from './linedata.js'
+import data from './data/linedata.js'
 
 const width = 800,
       height = 500,
