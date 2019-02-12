@@ -53,9 +53,9 @@ class PieChart extends Component {
                   .outerRadius(250)
 
     // label arcs
-    const labelArcs = d3.arc()
-                        .innerRadius(150)
-                        .outerRadius(250)
+    // const labelArcs = d3.arc()
+    //                     .innerRadius(150)
+    //                     .outerRadius(250)
 
     // generate the group
     const g = this.svg.append("g")
