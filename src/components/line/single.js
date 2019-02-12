@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
 import * as d3 from 'd3'
 
-import data from './data/linedata.js'
+import data from './data/singledata.js'
+// import dataTsv from './data/data4.tsv'
+
+// let data = []
+// let formatDate = d3.timeFormat("%d-%b-%y")
+// function type (d) {
+//   d.date = formatDate.parse(d.date)
+//   d.close = +d.close
+//   return d
+// }
+
+// d3.tsv(dataTsv, type, d => {
+//   console.log('data', d)
+//   data.push(d)
+// });
 
 const width = 800,
       height = 500,
@@ -24,6 +38,11 @@ class Single extends Component {
     this.xScale = d3.scaleLinear()
                 .domain([0, d3.max(data, d => d.x)])
                 .range([margin, xAxisWidth]) // 在绘图中值域
+
+    // this.xScale = d3.scaleTime()
+    //             .domain([0, d3.max(data, d => d.x)])
+    //             .range([margin, xAxisWidth]) // 在绘图中值域
+
     // 确定 y轴 数据区间
     this.yScale = d3.scaleLinear()
                      .domain([0, d3.max(data, d => d.y)]) // domain: [0, max] of y
