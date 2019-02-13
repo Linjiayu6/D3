@@ -27,29 +27,28 @@ const routeList = [
   }
 ]
 
-const BasicExample = () => (
-  <Router>
-    <div>
-      <ul>
-        {
-          routeList.map(({ path, desc }, key) => (
-            <li key={key}><Link to={path}>{desc}</Link></li>
-          ))
-        }
-      </ul>
+export default () => (
+  // <Router>
+  //   <div>
+  //     <ul>
+  //       {
+  //         routeList.map(({ path, desc }, key) => (
+  //           <li key={key}><Link to={path}>{desc}</Link></li>
+  //         ))
+  //       }
+  //     </ul>
 
-      <hr />
-      {/* {
-        routeList.map(({ path, component }) => (
-          <Route path={path} component={component()} />
-        ))
-      } */}
+  //     <hr />
+  //     {/* {
+  //       routeList.map(({ path, component }) => (
+  //         <Route path={path} component={component()} />
+  //       ))
+  //     } */}
 
-      <Route exact path="/" component={() => <div>Home</div>} />
-      <Route path="/line/single" component={lineSingle} />
-      <Route path="/line/multi" component={lineMulti} />
-    </div>
-  </Router>
-);
-
-export default BasicExample
+  //     <Route exact path="/" component={() => <div>Home</div>} />
+  //     <Route path="/line/single" component={lineSingle} />
+  //     <Route path="/line/multi" component={lineMulti} />
+  //   </div>
+  // </Router>
+  <div>1231</div>
+)
