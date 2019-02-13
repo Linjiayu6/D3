@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as d3 from 'd3'
 
 import data from './data/singledata.js'
-// import dataTsv from './data/data4.tsv'
+// import dataTsv from './data/singledata.tsv'
 
 // let data = []
 // let formatDate = d3.timeFormat("%d-%b-%y")
@@ -38,10 +38,6 @@ class Single extends Component {
     this.xScale = d3.scaleLinear()
                 .domain([0, d3.max(data, d => d.x)])
                 .range([margin, xAxisWidth]) // 在绘图中值域
-
-    // this.xScale = d3.scaleTime()
-    //             .domain([0, d3.max(data, d => d.x)])
-    //             .range([margin, xAxisWidth]) // 在绘图中值域
 
     // 确定 y轴 数据区间
     this.yScale = d3.scaleLinear()

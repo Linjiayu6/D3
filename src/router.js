@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import lineSingle from './components/line/single'
+import lineMulti from './components/line/multi'
 // import pieChart from './components/chart/pieChart'
 
 const routeList = [
@@ -19,11 +20,11 @@ const routeList = [
     desc: '[Line Chart] Single',
     component: lineSingle
   },
-  // {
-  //   path: '/chart/pie',
-  //   desc: 'Pie Chart',
-  //   component: pieChart
-  // }
+  {
+    path: '/line/multi',
+    desc: '[Line Chart] Multi',
+    component: lineMulti
+  }
 ]
 
 const BasicExample = () => (
@@ -46,7 +47,7 @@ const BasicExample = () => (
 
       <Route exact path="/" component={() => <div>Home</div>} />
       <Route path="/line/single" component={lineSingle} />
-      {/* <Route path="/chart/pie" component={pieChart} /> */}
+      <Route path="/line/multi" component={lineMulti} />
     </div>
   </Router>
 );
