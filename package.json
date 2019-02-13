@@ -5,6 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "d3": "^5.8.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
