@@ -142,6 +142,9 @@ class Multi extends Component {
             .call(yAxis)
   }
 
+  /**
+   * 6. 画 lines
+   */
   renderLines () {
     const { handleLines, handleCircles } = this
     const line= d3.line()

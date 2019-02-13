@@ -28,27 +28,27 @@ const routeList = [
 ]
 
 export default () => (
-  // <Router>
-  //   <div>
-  //     <ul>
-  //       {
-  //         routeList.map(({ path, desc }, key) => (
-  //           <li key={key}><Link to={path}>{desc}</Link></li>
-  //         ))
-  //       }
-  //     </ul>
+  // https://medium.com/@Dragonza/react-router-problem-with-gh-pages-c93a5e243819
+  <Router basename={process.env.PUBLIC_URL}>
+    <div>
+      <ul>
+        {
+          routeList.map(({ path, desc }, key) => (
+            <li key={key}><Link to={path}>{desc}</Link></li>
+          ))
+        }
+      </ul>
 
-  //     <hr />
-  //     {/* {
-  //       routeList.map(({ path, component }) => (
-  //         <Route path={path} component={component()} />
-  //       ))
-  //     } */}
+      <hr />
+      {/* {
+        routeList.map(({ path, component }) => (
+          <Route path={path} component={component()} />
+        ))
+      } */}
 
-  //     <Route exact path="/" component={() => <div>Home</div>} />
-  //     <Route path="/line/single" component={lineSingle} />
-  //     <Route path="/line/multi" component={lineMulti} />
-  //   </div>
-  // </Router>
-  <div>1231</div>
+      <Route exact path="/" component={() => <div>Home</div>} />
+      <Route path="/line/single" component={lineSingle} />
+      <Route path="/line/multi" component={lineMulti} />
+    </div>
+  </Router>
 )
