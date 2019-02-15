@@ -7,6 +7,7 @@ import {
 
 import lineSingle from './components/line/single'
 import lineMulti from './components/line/multi'
+import lineMulti2 from './components/line/multi2'
 // import pieChart from './components/chart/pieChart'
 
 const routeList = [
@@ -24,6 +25,11 @@ const routeList = [
     path: '/line/multi',
     desc: '[Line Chart] Multi',
     component: lineMulti
+  },
+  {
+    path: '/line/multi2',
+    desc: '[Line Chart] Multi2',
+    component: lineMulti2
   }
 ]
 
@@ -40,15 +46,10 @@ export default () => (
       </ul>
 
       <hr />
-      {/* {
-        routeList.map(({ path, component }) => (
-          <Route path={path} component={component()} />
-        ))
-      } */}
-
       <Route exact path="/" component={() => <div>Home</div>} />
       <Route path="/line/single" component={lineSingle} />
       <Route path="/line/multi" component={lineMulti} />
+      <Route path="/line/multi2" component={lineMulti2} />
     </div>
   </Router>
 )

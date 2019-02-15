@@ -7,8 +7,8 @@ import multidata from './data/multidata'
 /**
  * 1. 定义视图大小
  */
-const width = 800,
-      height = 600,
+const width = 500,
+      height = 300,
       margin = 50,
       svgWidth = width + margin,
       svgHeight = height + margin
@@ -128,8 +128,8 @@ class Multi extends Component {
     /**
      * 5. 画 xAxis, yAxis
      */
-    const xAxis = d3.axisBottom(xScale).ticks(10)
-    const yAxis = d3.axisLeft(yScale).ticks(10)
+    const xAxis = d3.axisBottom(xScale).ticks(6)
+    const yAxis = d3.axisLeft(yScale).ticks(6)
 
     this.svg.append('g')
             .attr('id', 'xAxis')
@@ -147,7 +147,7 @@ class Multi extends Component {
    */
   renderLines () {
     const { handleLines, handleCircles } = this
-    const line= d3.line()
+    const line = d3.line()
                    .x(d => xScale(d.date))
                    .y(d => yScale(d.price))
 
@@ -172,7 +172,7 @@ class Multi extends Component {
     drawLine.selectAll('.circle-group') // 选择下面所有circle-group
             .data(data).enter() // 所有数据绑定数据
             .append('g') // 添加足够数量的元素
-            .style("fill", (d, i) => color(i))
+            .style('fill', (d, i) => color(i))
             .attr('class', d => `circle-group ${d.name}`) // <g class="circle-group Maxico"></g>
 
             // 相当于一个循环: 单个item的所有点
