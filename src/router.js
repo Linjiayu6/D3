@@ -18,22 +18,22 @@ const routeList = [
     component: <div>Home</div>
   },
   {
-    path: '/line/single',
+    path: '/D3/line/single',
     desc: '[Line Chart] Single',
     component: lineSingle
   },
   {
-    path: '/line/multi',
+    path: '/D3/line/multi',
     desc: '[Line Chart] Multi',
     component: lineMulti
   },
   {
-    path: '/line/multi2',
+    path: '/D3/line/multi2',
     desc: '[Line Chart] Multi2',
     component: lineMulti2
   },
   {
-    path: '/bar/multi',
+    path: '/D3/bar/multi',
     desc: '[Bar Chart] bar',
     component: bar
   }
@@ -53,10 +53,10 @@ export default () => (
 
       <hr />
       <Route exact path="/" component={() => <div>Home</div>} />
-      <Route path="/line/single" component={lineSingle} />
-      <Route path="/line/multi" component={lineMulti} />
-      <Route path="/line/multi2" component={lineMulti2} />
-      <Route path="/bar/multi" component={bar} />
+      <Route path="/D3/line/single" component={lineSingle} />
+      <Route path="/D3/line/multi" component={lineMulti} />
+      <Route path="/D3/line/multi2" component={lineMulti2} />
+      <Route path="/D3/bar/multi" component={bar} />
     </div>
   </Router>
 )

@@ -18,7 +18,7 @@ let data = [],
  */
 const margin = 60,
       height = 400,
-      width = window.innerWidth - margin * 2,
+      width = 600,
       svgWidth = width + margin,
       svgHeight = height + margin
 
@@ -67,12 +67,12 @@ const onScale = lineData => {
     )
   )
   xScale = d3.scaleTime()
-                    .domain(d3.extent(lineData[0].values, ({ date }) => date ))
-                    .range([0, width - margin])
+              .domain(d3.extent(lineData[0].values, ({ date }) => date ))
+              .range([0, width - margin])
 
   yScale = d3.scaleLinear()
-                    .domain([0, d3.max(allValues, d => d )])
-                    .range([height - margin, 0])
+              .domain([0, d3.max(allValues, d => d )])
+              .range([height - margin, 0])
 }
 
 class Multi2 extends Component {
