@@ -16,9 +16,9 @@ let data = [],
 /**
  * 1. 定义各种大小
  */
-const width = 700,
-      height = 300,
-      margin = 60,
+const margin = 60,
+      height = 400,
+      width = window.innerWidth - margin * 2,
       svgWidth = width + margin,
       svgHeight = height + margin
 
